@@ -118,7 +118,7 @@ export const getRandomSuggestion = async (
     const querySnapshot = await getDocs(q);
     const suggestions: Suggestion[] = [];
 
-    querySnapshot.forEach((doc) => {
+    querySnapshot.forEach(doc => {
       const data = doc.data();
       suggestions.push(createSuggestionFromFirestore(doc, data));
     });
@@ -153,7 +153,7 @@ export const getSuggestionsByTimeOfDay = async (
     const querySnapshot = await getDocs(q);
     const suggestions: Suggestion[] = [];
 
-    querySnapshot.forEach((doc) => {
+    querySnapshot.forEach(doc => {
       const data = doc.data();
       suggestions.push(createSuggestionFromFirestore(doc, data));
     });
@@ -182,7 +182,7 @@ export const getHighAcceptanceSuggestions = async (
     const querySnapshot = await getDocs(q);
     const suggestions: Suggestion[] = [];
 
-    querySnapshot.forEach((doc) => {
+    querySnapshot.forEach(doc => {
       const data = doc.data();
       suggestions.push(createSuggestionFromFirestore(doc, data));
     });
@@ -264,7 +264,7 @@ export const getSuggestionsByCategory = async (
     const querySnapshot = await getDocs(q);
     const suggestions: Suggestion[] = [];
 
-    querySnapshot.forEach((doc) => {
+    querySnapshot.forEach(doc => {
       const data = doc.data();
       suggestions.push(createSuggestionFromFirestore(doc, data));
     });
@@ -292,7 +292,7 @@ export const getActiveSuggestions = async (): Promise<
     const querySnapshot = await getDocs(q);
     const suggestions: Suggestion[] = [];
 
-    querySnapshot.forEach((doc) => {
+    querySnapshot.forEach(doc => {
       const data = doc.data();
       suggestions.push(createSuggestionFromFirestore(doc, data));
     });

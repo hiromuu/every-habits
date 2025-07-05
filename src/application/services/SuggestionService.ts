@@ -73,9 +73,8 @@ export const getRandomSuggestion = async (
 ): Promise<ApiResponse<Suggestion>> => {
   try {
     // 既存の提案からランダムに選択
-    const existingSuggestion = await getRandomSuggestionFromFirestore(
-      timeOfDay
-    );
+    const existingSuggestion =
+      await getRandomSuggestionFromFirestore(timeOfDay);
 
     if (existingSuggestion.success && existingSuggestion.data) {
       return existingSuggestion;

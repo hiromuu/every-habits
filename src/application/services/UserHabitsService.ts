@@ -12,9 +12,8 @@ export class UserHabitsService {
   ): Promise<ApiResponse<UserIdealHabits>> {
     try {
       // 既存の習慣データを取得
-      const existingHabits = await this.userHabitsRepository.getUserIdealHabits(
-        userId
-      );
+      const existingHabits =
+        await this.userHabitsRepository.getUserIdealHabits(userId);
 
       if (existingHabits.success && existingHabits.data) {
         // 既存データがある場合は更新

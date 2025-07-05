@@ -75,7 +75,7 @@ const parseSuggestionResponse = (
       console.error("Validation errors:", validationResult.error.errors);
       throw new Error(
         `Validation failed: ${validationResult.error.errors
-          .map((e) => e.message)
+          .map(e => e.message)
           .join(", ")}`
       );
     }
